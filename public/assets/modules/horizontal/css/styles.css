@@ -1,0 +1,126 @@
+
+
+/** page structure **/
+#w {
+  display: block;
+  max-width: 83%;
+  min-width: 300px;
+  margin: 0 auto;
+  background: #fafafa;
+  
+}
+
+
+/** posts slider widget **/
+.crsl-items {
+  display: block;
+  
+}
+
+.crsl-item {
+  background: #fafafa;
+  padding: 8px;
+  
+}
+
+.crsl-item .thumbnail {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  /* cursor: pointer; */
+  background: #24272a;
+}
+.crsl-item .thumbnail img { 
+  display: block; /* fix 1px image space http://stackoverflow.com/q/5804256/477958 */
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.crsl-item .thumbnail:hover img {
+  /*opacity: 0.8;*/
+}
+
+.crsl-item h3 {
+  
+  line-height: 1.25em;
+  margin-bottom: 12px;
+}
+.crsl-item h3 a {
+  text-decoration: none;
+  color: #333;
+}
+.crsl-item h3 a:hover {
+  text-decoration: underline;
+}
+
+.crsl-item .postdate {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 6px;
+  color: #fff;
+  
+
+ 
+  background: #D0AF51;
+}
+
+.crsl-item p {
+  
+  line-height: 1.55em;
+  margin-bottom: 5px;
+}
+
+.crsl-item p.readmore a {
+  display: block;
+  float: right;
+  color: #D0AF51;
+  padding: 3px 5px;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+.crsl-item p.readmore a:hover {
+  background: #4b6caa;
+  color: #fff;
+}
+
+
+/** posts slider nav **/
+.slidernav {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.slidernav a {
+  display: inline-block;
+  padding: 5px 8px;
+  margin-right: 8px;
+
+  background: #fafafa;
+  color: #666;
+  text-decoration: none;
+  
+  
+
+}
+.slidernav a:active {
+  
+}
+
+
+/** media queries **/
+@media screen and (max-width: 660px) {
+  h1 { font-size: 2.4em; line-height: 1.2em; }
+  
+  .crsl-item h3 { font-size: 1.65em; }
+}
+
+/** clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }

@@ -1,0 +1,46 @@
+body {margin:0}
+
+.icon-bar2 {
+    position: sticky;
+    top: 100px;
+    z-index: 100;
+    width: 60px;
+    text-align: center;
+    background-color: #555;
+    float: right;
+}
+
+.icon-bar2 a {
+    padding: 10px;
+    display: block;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 26px;
+}
+
+.icon-bar2 a:hover {
+    background-color: #FFC600;
+}
+@media (max-width: 640px) {
+.icon-bar2 {
+    position: sticky;
+    top: 75px;
+    width: 100%;
+    text-align: center;
+    background-color: #555;
+    /* overflow: auto; */
+}
+
+.icon-bar2 a {
+    width: 20%;
+    padding: 12px 0;
+    float: left;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 16px;
+}
+
+.icon-bar2 a:hover {
+    background-color: #FFC600;
+}
+}

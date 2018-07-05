@@ -1,0 +1,49 @@
+[onclick],
+button,
+input[type=button],
+input[type=submit],
+label {
+	cursor: pointer
+}
+
+
+h5,
+h6,
+li,
+menu,
+ul,
+var {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: 0 0
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+
+ol {
+	list-style-type: decimal
+}
+
+
+button,
+input{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: 0 0
+}
+
+
+
+
+
+
+
