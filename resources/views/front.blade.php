@@ -326,10 +326,11 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                             <div class="row">
 
                                 <!-- Event 1 -->
+                                @foreach ($events as $event)
                                 <div class="col-md-6">
                                     <ul>
                                         <!-- Image -->
-                                        <li class="col-sm-6 no-padding"> <img class="img-responsive" src="images/kegiatan/1.jpg" alt="">
+                                        <li class="col-sm-6 no-padding"> <img class="img-responsive" src="{{ 'storage1/'.$event->image }}" alt="">
                                             <div class="date">13
                                                 <div class="tanggal">JUL 2018</div>
                                             </div>
@@ -337,7 +338,7 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                                         <!-- Detail -->
                                         <li class="col-sm-6 no-padding">
                                             <div class="event-detail">
-                                                <h4> Let’s Celebrate 25th Museum Day </h4>
+                                                <h4> {{ $event->getTranslatedAttribute('title') }} </h4>
                                                 <h6><i class="fa fa-map-marker"></i>&nbsp; Bandung, Indonesia<br><i class="fa fa-clock-o"></i>&nbsp; 10.00-12.00 WIB</h6>
                                                 <p class="block-with-text">I have always wanted to have a neighbor just like you. Ive always wanted to live in a neighborhood with you. </p>
                                                 <p><a class="login-social" href="detil-kegiatan">Selengkapnya ></a></p>
@@ -345,27 +346,7 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                                         </li>
                                     </ul>
                                 </div>
-
-                                <!-- Event 2 -->
-                                <div class="col-md-6">
-                                    <ul>
-                                        <!-- Image -->
-                                        <li class="col-sm-6 no-padding"> <img class="img-responsive" src="images/kegiatan/2.jpg" alt="">
-                                            <div class="date">18
-                                                <div class="tanggal">AGU 2018</div>
-                                            </div>
-                                        </li>
-                                        <!-- Detail -->
-                                        <li class="col-sm-6 no-padding">
-                                            <div class="event-detail">
-                                                <h4> ancient statues case study </h4>
-                                                <h6><i class="fa fa-map-marker"></i>&nbsp; Bandung, Indonesia<br><i class="fa fa-clock-o"></i>&nbsp; 08.00-15.00 WIB</h6>
-                                                <p class="block-with-text">I have always wanted to have a neighbor just like you. Ive always wanted to live in a neighborhood with you. I have always wanted to have a neighbor just like you.</p>
-                                                <p><a class="login-social" href="detil-kegiatan">Selengkapnya ></a></p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </section>
@@ -388,21 +369,23 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                 <div class="row">
                     <div class="col-md-12">
                         <div id="news-slider" class="owl-carousel">
+                                @foreach ($news as $n)
                             <div class="post-slide">
                                 <div class="post-content">
-                                    <img src="images/berita/thumb01.jpg" alt="">
+                                    <img src="{{ 'storage1/'.$n->image }}" alt="">
                                     <div class="post-date">
                                         <span class="date">15 Feb 2018</span>
                                     </div>
                                     <h4 class="orange">
-                                        Lorem ipsum dolor sit amet, consectetur.
+                                        {{ $n->getTranslatedAttribute('title') }}.
                                     </h4>
                                     <p class="post-description">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum earum porro quisquam repellendus tempora? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum earum porro quisquam repellendus tempora?
+                                        {{ $n->getTranslatedAttribute('excerpt') }}
                                     </p>
                                     <p><a class="login-social" href="detil-berita">Selengkapnya ></a></p>
                                 </div>
                             </div>
+                                @endforeach
                             <div class="post-slide">
                                 <div class="post-content">
                                     <img src="images/berita/thumb02.jpg" alt="">

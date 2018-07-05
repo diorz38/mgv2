@@ -12,11 +12,11 @@
 */
 
 // MAIN PAGE ROUTES
-Route::get('/', function () {
-    // return view('site');
-    return view('front');
+// Route::get('/', function () {
+//     return view('front');
 
-});
+// });
+Route::get('/', 'FrontController@index');
 
 // PAGES ROUTES
 Route::get('/sejarah', function () {
