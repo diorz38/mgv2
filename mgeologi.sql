@@ -12,7 +12,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Dumping structure for table mgeologi.categories
-DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned DEFAULT NULL,
@@ -36,7 +35,6 @@ INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_a
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.contents
-DROP TABLE IF EXISTS `contents`;
 CREATE TABLE IF NOT EXISTS `contents` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `author_id` int(10) unsigned DEFAULT NULL,
@@ -51,18 +49,26 @@ CREATE TABLE IF NOT EXISTS `contents` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table mgeologi.contents: ~2 rows (approximately)
+-- Dumping data for table mgeologi.contents: ~12 rows (approximately)
 DELETE FROM `contents`;
 /*!40000 ALTER TABLE `contents` DISABLE KEYS */;
 INSERT INTO `contents` (`id`, `author_id`, `category_id`, `title`, `excerpt`, `body`, `image`, `slug`, `status`, `featured`, `created_at`, `updated_at`) VALUES
-	(2, 1, 1, 'Indonesia Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt ', '<h2>BUSANA TAHUN 2016</h2>\n<hr />\n<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>\n<h3>Header Level 3</h3>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt</p>\n<ul>\n<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n<li>Aliquam tincidunt mauris eu risus.</li>\n</ul>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>', 'contents\\July2018\\0grNNf0sjK2xR5nIxppR.jpg', 'test', 'DRAFT', 1, '2018-07-04 14:11:00', '2018-07-04 14:32:15'),
-	(3, 1, 1, 'Indonesia Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt ', '<h2>BUSANA TAHUN 2016</h2>\n<hr />\n<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>\n<h3>Header Level 3</h3>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt</p>\n<ul>\n<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n<li>Aliquam tincidunt mauris eu risus.</li>\n</ul>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>', 'contents\\July2018\\Uy1ASGTaW3fiwcgPsMxg.jpg', 'test', 'DRAFT', 0, '2018-07-04 14:12:00', '2018-07-04 14:17:18');
+	(2, 1, 1, 'Indonesia Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt ', '<h2>BUSANA TAHUN 2016</h2>\n<hr />\n<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>\n<h3>Header Level 3</h3>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt</p>\n<ul>\n<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n<li>Aliquam tincidunt mauris eu risus.</li>\n</ul>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>', 'contents\\July2018\\0grNNf0sjK2xR5nIxppR.jpg', 'test1', 'DRAFT', 1, '2018-07-04 14:11:00', '2018-07-04 14:32:15'),
+	(3, 1, 1, 'Indonesia Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt ', '<h2>BUSANA TAHUN 2016</h2>\n<hr />\n<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>\n<h3>Header Level 3</h3>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt</p>\n<ul>\n<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n<li>Aliquam tincidunt mauris eu risus.</li>\n</ul>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>', 'posts\\post2-cropped.jpg', 'test', 'DRAFT', 0, '2018-07-03 14:12:00', '2018-07-04 14:17:18'),
+	(4, 1, 2, 'Perburuan harta karun untuk keluarga', 'Suscipit nihil soluta est facilis et beatae animi. Consequatur dolore eum suscipit sed id. Numquam qui pariatur perferendis.', '<p>Qui quia impedit velit et dicta nemo ut. Placeat sunt sunt porro debitis eaque. Est iusto reiciendis doloribus doloremque ut.</p>', 'contents\\July2018\\2.jpg', 're-contextualized-local-circuit', 'DRAFT', 0, '2018-04-02 14:44:41', '2018-07-05 14:44:41'),
+	(5, 2, 1, 'Polarised stable info-mediaries', 'Ea facilis sapiente consequuntur atque sit placeat perspiciatis. Nostrum dolores a doloremque beatae dolores expedita. Quas ullam qui est deserunt non quis.', 'Dolore mollitia illo eveniet architecto eos. Nemo sit consequatur illum rerum ut molestias possimus.', 'posts\\post3-cropped.jpg', 'polarised-stable-info-mediaries', 'DRAFT', 0, '1978-11-24 20:00:40', '1997-03-12 23:03:24'),
+	(6, 2, 1, 'Innovative mission-critical parallelism', 'Libero minima quam eveniet quae exercitationem repellendus. Itaque ex autem voluptas sunt quisquam in et. Doloremque eum ut perferendis dolore in voluptas.', 'Aut ut neque et quos voluptas libero et ipsam. Perferendis iste doloribus nam omnis. Ad nihil aliquam alias aut facilis.', 'contents\\July2018\\5NRM8eGNIsqM2YuGXDkZ.jpg', 'innovative-mission-critical-parallelism', 'DRAFT', 0, '1988-12-16 11:26:40', '1970-04-22 20:51:37'),
+	(7, 1, 2, 'Robust 24/7 product', 'Quos numquam error veritatis ipsam commodi quo. Qui nostrum sit sunt. Facere quibusdam dignissimos officiis pariatur voluptas nihil amet.', '<p>Corporis consequuntur aut sunt quam repellendus. Est minus nobis saepe quibusdam distinctio beatae vel. Eligendi id nulla ad optio.</p>', 'posts\\post4-cropped.jpg', 'robust-247-product', 'DRAFT', 0, '1980-07-27 12:17:00', '2018-07-05 14:38:12'),
+	(8, 2, 1, 'Right-sized 5thgeneration matrices', 'Libero ad molestiae et qui. Vero sed amet veniam hic dolores omnis. Exercitationem impedit veritatis commodi quia repudiandae. Quas commodi dolor harum exercitationem accusantium necessitatibus.', '<p>Laborum occaecati recusandae earum. Aliquam et accusantium vero aut.</p>', 'posts\\post3-cropped.jpg', 'right-sized-5thgeneration-matrices', 'DRAFT', 0, '2011-07-23 09:30:00', '2018-07-05 14:39:33'),
+	(9, 2, 1, 'Reactive attitude-oriented structure', 'Laborum corporis perferendis aut aut aperiam autem dolores cupiditate. Modi hic minima harum modi. Et mollitia maiores dolorum. Quia vitae omnis fugiat autem id debitis dolores.', 'Dolorem fugit dolor tempore molestias nesciunt. Et vel sunt sint. Sit qui dolorem accusamus et quae tenetur vero.', 'contents\\July2018\\0grNNf0sjK2xR5nIxppR.jpg', 'reactive-attitude-oriented-structure', 'DRAFT', 0, '1988-11-03 02:45:00', '2012-05-05 00:03:38'),
+	(10, 2, 1, 'Assimilated global knowledgebase', 'Accusamus esse nihil neque. Sunt sit quis velit unde. Iste occaecati esse reprehenderit soluta. Sunt sint ex laboriosam nostrum quam iure est blanditiis.', 'Necessitatibus nihil ratione velit et aut doloremque iste. Est repudiandae ab expedita. Natus eius adipisci vel necessitatibus ut. Eos qui illo ullam quia sed molestiae sint.', 'posts\\post2-cropped.jpg', 'assimilated-global-knowledgebase', 'DRAFT', 0, '1978-02-18 21:43:01', '2010-04-07 04:43:32'),
+	(11, 2, 2, 'Cloned full-range workforce', 'Aut assumenda itaque expedita quos et. Est soluta sunt porro sit. Sequi doloribus sunt qui. Quam laudantium omnis tenetur quis impedit.', 'In adipisci perferendis aut iste adipisci quibusdam in. Et nisi natus quia accusantium atque. Vel culpa dolorem quis facere impedit accusamus earum. Et aut maxime maxime velit.', 'contents\\July2018\\5NRM8eGNIsqM2YuGXDkZ.jpg', 'cloned-full-range-workforce', 'DRAFT', 0, '2012-06-03 06:13:56', '1983-02-21 22:28:03'),
+	(13, 2, 2, 'Perayaan Hari Musium ke-25th', 'Eius provident neque et illum voluptatem aut hic temporibus. Voluptatem ut voluptatibus est atque dolorem placeat aut. Voluptas aperiam earum voluptatem animi et consequatur.', '<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.\r\nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt\r\n    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\r\n    Aliquam tincidunt mauris eu risus.\r\nPellentesque habitant morbi tristiue senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus\r\nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus </p>', 'contents\\July2018\\1.jpg', 'user-centric-needs-based-implementation', 'DRAFT', 0, '2018-07-05 14:54:33', '2018-07-05 14:54:33');
 /*!40000 ALTER TABLE `contents` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.data_rows
-DROP TABLE IF EXISTS `data_rows`;
 CREATE TABLE IF NOT EXISTS `data_rows` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `data_type_id` int(10) unsigned NOT NULL,
@@ -82,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `data_rows` (
   CONSTRAINT `data_rows_data_type_id_foreign` FOREIGN KEY (`data_type_id`) REFERENCES `data_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table mgeologi.data_rows: ~73 rows (approximately)
+-- Dumping data for table mgeologi.data_rows: ~72 rows (approximately)
 DELETE FROM `data_rows`;
 /*!40000 ALTER TABLE `data_rows` DISABLE KEYS */;
 INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, `required`, `browse`, `read`, `edit`, `add`, `delete`, `details`, `order`) VALUES
@@ -161,7 +167,6 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 /*!40000 ALTER TABLE `data_rows` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.data_types
-DROP TABLE IF EXISTS `data_types`;
 CREATE TABLE IF NOT EXISTS `data_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -183,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `data_types` (
   UNIQUE KEY `data_types_slug_unique` (`slug`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table mgeologi.data_types: ~6 rows (approximately)
+-- Dumping data for table mgeologi.data_types: ~7 rows (approximately)
 DELETE FROM `data_types`;
 /*!40000 ALTER TABLE `data_types` DISABLE KEYS */;
 INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
@@ -197,7 +202,6 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 /*!40000 ALTER TABLE `data_types` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.menus
-DROP TABLE IF EXISTS `menus`;
 CREATE TABLE IF NOT EXISTS `menus` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -215,7 +219,6 @@ INSERT INTO `menus` (`id`, `name`, `created_at`, `updated_at`) VALUES
 /*!40000 ALTER TABLE `menus` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.menu_items
-DROP TABLE IF EXISTS `menu_items`;
 CREATE TABLE IF NOT EXISTS `menu_items` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `menu_id` int(10) unsigned DEFAULT NULL,
@@ -235,29 +238,28 @@ CREATE TABLE IF NOT EXISTS `menu_items` (
   CONSTRAINT `menu_items_menu_id_foreign` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table mgeologi.menu_items: ~14 rows (approximately)
+-- Dumping data for table mgeologi.menu_items: ~15 rows (approximately)
 DELETE FROM `menu_items`;
 /*!40000 ALTER TABLE `menu_items` DISABLE KEYS */;
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 	(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2018-07-02 04:19:05', '2018-07-02 04:19:05', 'voyager.dashboard', NULL),
-	(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2018-07-02 04:19:05', '2018-07-02 04:19:05', 'voyager.media.index', NULL),
+	(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 4, '2018-07-02 04:19:05', '2018-07-05 13:18:45', 'voyager.media.index', NULL),
 	(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 3, '2018-07-02 04:19:05', '2018-07-02 04:19:05', 'voyager.users.index', NULL),
 	(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 2, '2018-07-02 04:19:05', '2018-07-02 04:19:05', 'voyager.roles.index', NULL),
 	(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 9, '2018-07-02 04:19:05', '2018-07-02 04:19:05', NULL, NULL),
-	(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 10, '2018-07-02 04:19:05', '2018-07-02 04:19:05', 'voyager.menus.index', NULL),
-	(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 11, '2018-07-02 04:19:05', '2018-07-02 04:19:05', 'voyager.database.index', NULL),
-	(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 12, '2018-07-02 04:19:05', '2018-07-02 04:19:05', 'voyager.compass.index', NULL),
-	(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 13, '2018-07-02 04:19:05', '2018-07-02 04:19:05', 'voyager.bread.index', NULL),
-	(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 14, '2018-07-02 04:19:05', '2018-07-02 04:19:05', 'voyager.settings.index', NULL),
+	(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2018-07-02 04:19:05', '2018-07-05 13:18:46', 'voyager.menus.index', NULL),
+	(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2018-07-02 04:19:05', '2018-07-05 13:18:46', 'voyager.database.index', NULL),
+	(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2018-07-02 04:19:05', '2018-07-05 13:18:46', 'voyager.compass.index', NULL),
+	(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2018-07-02 04:19:05', '2018-07-05 13:18:46', 'voyager.bread.index', NULL),
+	(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 10, '2018-07-02 04:19:05', '2018-07-05 13:18:46', 'voyager.settings.index', NULL),
 	(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 8, '2018-07-02 04:19:12', '2018-07-02 04:19:12', 'voyager.categories.index', NULL),
 	(12, 1, 'Posts', '', '_self', 'voyager-news', NULL, NULL, 6, '2018-07-02 04:19:14', '2018-07-02 04:19:14', 'voyager.posts.index', NULL),
 	(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 7, '2018-07-02 04:19:15', '2018-07-02 04:19:15', 'voyager.pages.index', NULL),
-	(14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 13, '2018-07-02 04:19:17', '2018-07-02 04:19:17', 'voyager.hooks', NULL),
-	(15, 1, 'Contents', '', '_self', NULL, NULL, NULL, 15, '2018-07-04 13:23:51', '2018-07-04 13:23:51', 'voyager.contents.index', NULL);
+	(14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 5, '2018-07-02 04:19:17', '2018-07-05 13:18:46', 'voyager.hooks', NULL),
+	(15, 1, 'Konten', '', '_self', 'voyager-browser', '#000000', NULL, 5, '2018-07-04 13:23:51', '2018-07-05 13:20:14', 'voyager.contents.index', 'null');
 /*!40000 ALTER TABLE `menu_items` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.migrations
-DROP TABLE IF EXISTS `migrations`;
 CREATE TABLE IF NOT EXISTS `migrations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -298,7 +300,6 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.pages
-DROP TABLE IF EXISTS `pages`;
 CREATE TABLE IF NOT EXISTS `pages` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `author_id` int(11) NOT NULL,
@@ -324,7 +325,6 @@ INSERT INTO `pages` (`id`, `author_id`, `title`, `excerpt`, `body`, `image`, `sl
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.password_resets
-DROP TABLE IF EXISTS `password_resets`;
 CREATE TABLE IF NOT EXISTS `password_resets` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -338,7 +338,6 @@ DELETE FROM `password_resets`;
 /*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.permissions
-DROP TABLE IF EXISTS `permissions`;
 CREATE TABLE IF NOT EXISTS `permissions` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -349,7 +348,7 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   KEY `permissions_key_index` (`key`)
 ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table mgeologi.permissions: ~41 rows (approximately)
+-- Dumping data for table mgeologi.permissions: ~46 rows (approximately)
 DELETE FROM `permissions`;
 /*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
 INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`) VALUES
@@ -402,7 +401,6 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 /*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.permission_role
-DROP TABLE IF EXISTS `permission_role`;
 CREATE TABLE IF NOT EXISTS `permission_role` (
   `permission_id` int(10) unsigned NOT NULL,
   `role_id` int(10) unsigned NOT NULL,
@@ -413,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `permission_role` (
   CONSTRAINT `permission_role_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table mgeologi.permission_role: ~40 rows (approximately)
+-- Dumping data for table mgeologi.permission_role: ~45 rows (approximately)
 DELETE FROM `permission_role`;
 /*!40000 ALTER TABLE `permission_role` DISABLE KEYS */;
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
@@ -465,7 +463,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 /*!40000 ALTER TABLE `permission_role` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.posts
-DROP TABLE IF EXISTS `posts`;
 CREATE TABLE IF NOT EXISTS `posts` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `author_id` int(11) NOT NULL,
@@ -497,7 +494,6 @@ INSERT INTO `posts` (`id`, `author_id`, `category_id`, `title`, `seo_title`, `ex
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.roles
-DROP TABLE IF EXISTS `roles`;
 CREATE TABLE IF NOT EXISTS `roles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -517,7 +513,6 @@ INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) V
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.settings
-DROP TABLE IF EXISTS `settings`;
 CREATE TABLE IF NOT EXISTS `settings` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -548,7 +543,6 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.translations
-DROP TABLE IF EXISTS `translations`;
 CREATE TABLE IF NOT EXISTS `translations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `table_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -560,9 +554,9 @@ CREATE TABLE IF NOT EXISTS `translations` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `translations_table_name_column_name_foreign_key_locale_unique` (`table_name`,`column_name`,`foreign_key`,`locale`)
-) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table mgeologi.translations: ~62 rows (approximately)
+-- Dumping data for table mgeologi.translations: ~77 rows (approximately)
 DELETE FROM `translations`;
 /*!40000 ALTER TABLE `translations` DISABLE KEYS */;
 INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `locale`, `value`, `created_at`, `updated_at`) VALUES
@@ -625,11 +619,27 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 	(61, 'contents', 'title', 3, 'en', 'English Lorem ipsum dolor sit amet, consectetur adipiscing elit', '2018-07-04 14:12:04', '2018-07-04 14:12:04'),
 	(62, 'contents', 'excerpt', 3, 'en', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt ', '2018-07-04 14:12:04', '2018-07-04 14:12:04'),
 	(63, 'contents', 'body', 3, 'en', '<h2>FASHION NOW 2016</h2>\n<hr />\n<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>\n<h3>Header Level 3</h3>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt</p>\n<ul>\n<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n<li>Aliquam tincidunt mauris eu risus.</li>\n</ul>\n<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>', '2018-07-04 14:12:04', '2018-07-04 14:24:44'),
-	(64, 'contents', 'slug', 3, 'en', 'test', '2018-07-04 14:12:04', '2018-07-04 14:12:04');
+	(64, 'contents', 'slug', 3, 'en', 'test', '2018-07-04 14:12:04', '2018-07-04 14:12:04'),
+	(65, 'menu_items', 'title', 15, 'en', 'Contents', '2018-07-05 13:20:13', '2018-07-05 13:20:13'),
+	(66, 'contents', 'title', 7, 'en', 'Robust 24/7 product', '2018-07-05 14:38:12', '2018-07-05 14:38:12'),
+	(67, 'contents', 'excerpt', 7, 'en', 'Quos numquam error veritatis ipsam commodi quo. Qui nostrum sit sunt. Facere quibusdam dignissimos officiis pariatur voluptas nihil amet.', '2018-07-05 14:38:12', '2018-07-05 14:38:12'),
+	(68, 'contents', 'body', 7, 'en', 'Corporis consequuntur aut sunt quam repellendus. Est minus nobis saepe quibusdam distinctio beatae vel. Eligendi id nulla ad optio.', '2018-07-05 14:38:12', '2018-07-05 14:38:12'),
+	(69, 'contents', 'slug', 7, 'en', 'robust-247-product', '2018-07-05 14:38:12', '2018-07-05 14:38:12'),
+	(70, 'contents', 'title', 8, 'en', 'Right-sized 5thgeneration matrices', '2018-07-05 14:39:33', '2018-07-05 14:39:33'),
+	(71, 'contents', 'excerpt', 8, 'en', 'Libero ad molestiae et qui. Vero sed amet veniam hic dolores omnis. Exercitationem impedit veritatis commodi quia repudiandae. Quas commodi dolor harum exercitationem accusantium necessitatibus.', '2018-07-05 14:39:33', '2018-07-05 14:39:33'),
+	(72, 'contents', 'body', 8, 'en', 'Laborum occaecati recusandae earum. Aliquam et accusantium vero aut.', '2018-07-05 14:39:33', '2018-07-05 14:39:33'),
+	(73, 'contents', 'slug', 8, 'en', 'right-sized-5thgeneration-matrices', '2018-07-05 14:39:33', '2018-07-05 14:39:33'),
+	(74, 'contents', 'title', 4, 'en', 'Family scavenger hunt', '2018-07-05 14:44:41', '2018-07-05 14:59:26'),
+	(75, 'contents', 'excerpt', 4, 'en', 'Suscipit nihil soluta est facilis et beatae animi. Consequatur dolore eum suscipit sed id. Numquam qui pariatur perferendis.', '2018-07-05 14:44:41', '2018-07-05 14:44:41'),
+	(76, 'contents', 'body', 4, 'en', '<p>Qui quia impedit velit et dicta nemo ut. Placeat sunt sunt porro debitis eaque. Est iusto reiciendis doloribus doloremque ut.</p>', '2018-07-05 14:44:41', '2018-07-05 14:59:26'),
+	(77, 'contents', 'slug', 4, 'en', 're-contextualized-local-circuit', '2018-07-05 14:44:41', '2018-07-05 14:44:41'),
+	(78, 'contents', 'title', 13, 'en', 'Let’s Celebrate 25th Museum Day', '2018-07-05 14:54:33', '2018-07-05 14:54:33'),
+	(79, 'contents', 'excerpt', 13, 'en', 'Eius provident neque et illum voluptatem aut hic temporibus. Voluptatem ut voluptatibus est atque dolorem placeat aut. Voluptas aperiam earum voluptatem animi et consequatur.', '2018-07-05 14:54:33', '2018-07-05 14:54:33'),
+	(80, 'contents', 'body', 13, 'en', '<p>Sint blanditiis voluptatem nisi veniam. Natus officia nulla autem tempora assumenda velit itaque. Expedita ea non quaerat est. Error sed est eum porro est.</p>', '2018-07-05 14:54:33', '2018-07-05 14:54:33'),
+	(81, 'contents', 'slug', 13, 'en', 'user-centric-needs-based-implementation', '2018-07-05 14:54:33', '2018-07-05 14:54:33');
 /*!40000 ALTER TABLE `translations` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.users
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `role_id` int(10) unsigned DEFAULT NULL,
@@ -647,16 +657,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table mgeologi.users: ~0 rows (approximately)
+-- Dumping data for table mgeologi.users: ~2 rows (approximately)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'Admin', 'admin@admin.com', 'users\\July2018\\eHrfSOfPeZyc6JAiEOVW.jpeg', '$2y$10$7B3vdxHZIlurb2N3O6/tAeB5oZ2KlPLpSzZLfSweL.US0JWcZKWGy', 'UxAuuxXyKYgmPjeM5USGVV5amCXS6Ewp3iJw0GVGjc7gwPbH80hkce3a8Kiv', '{"locale":"id"}', '2018-07-02 04:19:12', '2018-07-04 10:40:34'),
+	(1, 1, 'Admin', 'admin@admin.com', 'users\\July2018\\eHrfSOfPeZyc6JAiEOVW.jpeg', '$2y$10$7B3vdxHZIlurb2N3O6/tAeB5oZ2KlPLpSzZLfSweL.US0JWcZKWGy', 'r2xaYmkyQawHS8MZAGKIh5i0UyheGOjOD2wOgORIwMV3CAIw6HolAv0Mf7bN', '{"locale":"id"}', '2018-07-02 04:19:12', '2018-07-04 10:40:34'),
 	(2, 1, 'Admin Oge', 'asep@sutisna.id', 'users\\July2018\\rToBWKkmAyVLgyBtqIrv.jpg', '$2y$10$lJWcI5h7yuspoOwCR0eeC.kc5jRkHQApVUWrL4rfloL/HT1PFQyeq', NULL, '{"locale":"id"}', '2018-07-04 08:20:48', '2018-07-04 08:20:48');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Dumping structure for table mgeologi.user_roles
-DROP TABLE IF EXISTS `user_roles`;
 CREATE TABLE IF NOT EXISTS `user_roles` (
   `user_id` int(10) unsigned NOT NULL,
   `role_id` int(10) unsigned NOT NULL,

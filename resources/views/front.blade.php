@@ -331,8 +331,8 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                                     <ul>
                                         <!-- Image -->
                                         <li class="col-sm-6 no-padding"> <img class="img-responsive" src="{{ 'storage1/'.$event->image }}" alt="">
-                                            <div class="date">13
-                                                <div class="tanggal">JUL 2018</div>
+                                            <div class="date">{{ \Carbon\Carbon::parse($event->created_at)->format('d')}}
+                                                <div class="tanggal">{{ \Carbon\Carbon::parse($event->created_at)->format('M Y')}}</div>
                                             </div>
                                         </li>
                                         <!-- Detail -->
@@ -340,7 +340,7 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                                             <div class="event-detail">
                                                 <h4> {{ $event->getTranslatedAttribute('title') }} </h4>
                                                 <h6><i class="fa fa-map-marker"></i>&nbsp; Bandung, Indonesia<br><i class="fa fa-clock-o"></i>&nbsp; 10.00-12.00 WIB</h6>
-                                                <p class="block-with-text">I have always wanted to have a neighbor just like you. Ive always wanted to live in a neighborhood with you. </p>
+                                                <p class="block-with-text">{{ $event->getTranslatedAttribute('excerpt') }}</p>
                                                 <p><a class="login-social" href="detil-kegiatan">Selengkapnya ></a></p>
                                             </div>
                                         </li>
@@ -370,67 +370,22 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                     <div class="col-md-12">
                         <div id="news-slider" class="owl-carousel">
                                 @foreach ($news as $n)
-                            <div class="post-slide">
-                                <div class="post-content">
-                                    <img src="{{ 'storage1/'.$n->image }}" alt="">
-                                    <div class="post-date">
-                                        <span class="date">15 Feb 2018</span>
+                                <div class="post-slide">
+                                    <div class="post-content">
+                                        <img src="{{ 'storage1/'.$n->image }}" alt="">
+                                        <div class="post-date">
+                                            <span class="date">{{ \Carbon\Carbon::parse($n->created_at)->format('d M Y')}}</span>
+                                        </div>
+                                        <h4 class="orange">
+                                            {{ $n->getTranslatedAttribute('title') }}.
+                                        </h4>
+                                        <p class="post-description">
+                                            {{ $n->getTranslatedAttribute('excerpt') }}
+                                        </p>
+                                        <p><a class="login-social" href="detil-berita">Selengkapnya></a></p>
                                     </div>
-                                    <h4 class="orange">
-                                        {{ $n->getTranslatedAttribute('title') }}.
-                                    </h4>
-                                    <p class="post-description">
-                                        {{ $n->getTranslatedAttribute('excerpt') }}
-                                    </p>
-                                    <p><a class="login-social" href="detil-berita">Selengkapnya ></a></p>
                                 </div>
-                            </div>
                                 @endforeach
-                            <div class="post-slide">
-                                <div class="post-content">
-                                    <img src="images/berita/thumb02.jpg" alt="">
-                                    <div class="post-date">
-                                        <span class="date">17 Jan 2018</span>
-                                    </div>
-                                    <h4 class="orange">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </h4>
-                                    <p class="post-description">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum earum porro quisquam repellendus tempora? Pariatur.
-                                    </p>
-                                    <p><a class="login-social" href="detil-berita">Selengkapnya ></a></p>
-                                </div>
-                            </div>
-                            <div class="post-slide">
-                                <div class="post-content">
-                                    <img src="images/berita/thumb03.jpg" alt="">
-                                    <div class="post-date">
-                                        <span class="date">18 Des 2017</span>
-                                    </div>
-                                    <h4 class="orange">
-                                        Lorem ipsum dolor sit amet, consectetur.
-                                    </h4>
-                                    <p class="post-description">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum earum porro quisquam repellendus tempora? Pariatur.
-                                    </p>
-                                    <p><a class="login-social" href="detil-berita">Selengkapnya ></a></p>
-                                </div>
-                            </div>
-                            <div class="post-slide">
-                                <div class="post-content">
-                                    <img src="{{ asset('images/berita/thumb02.jpg') }}" alt="">
-                                    <div class="post-date">
-                                        <span class="date">19 Des 2017</span>
-                                    </div>
-                                    <h4 class="orange">
-                                        Lorem ipsum dolor sit amet, consecteturtttt.
-                                    </h4>
-                                    <p class="post-description">
-                                        LLLLLorem ipsum dolor sit amet, consectetur adipisicing elit. Cum earum porro quisquam repellendus tempora? Pariatur.
-                                    </p>
-                                    <p><a class="login-social" href="berita">Selengkapnya ></a></p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
