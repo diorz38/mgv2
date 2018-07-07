@@ -18,6 +18,8 @@
 // });
 Route::get('/', 'FrontController@index');
 
+Route::get('/museums/{id}', 'MuseumsController@show');
+
 // PAGES ROUTES
 Route::get('/sejarah', function () {
     // return view('site');

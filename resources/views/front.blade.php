@@ -435,7 +435,7 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                                     <p class="block-with-text">
                                          {{substr(strip_tags($museum->getTranslatedAttribute('desc')), 0, 200) }}
                                     </p>                                                          
-                                   <p><a class="login-social" href="m-tsunami">Selengkapnya ></a></p>                                    
+                                   <p><a class="login-social" href="museums/{{$museum->id}}">Selengkapnya ></a></p>
                                 </div>
                             </section>  
                         </div>                                 

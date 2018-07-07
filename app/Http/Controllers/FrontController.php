@@ -6,7 +6,7 @@ use DB;
 use Illuminate\Http\Request;
 use App\Content;
 use App\Museum;
-use App\Data_type;
+// use App\Data_type;
 
 class FrontController extends Controller
 {
