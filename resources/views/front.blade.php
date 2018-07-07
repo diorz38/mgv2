@@ -418,6 +418,7 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
             <!-- / tabs -->
             <div class="tab_content">
                 <!-- / tabs_item -->
+                @foreach ($museums as $museum)
                 <div class="tabs_item">
                     <div class="row">
                         <div class="blog-lst col-md-12 pl0">
@@ -428,10 +429,10 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                                     </div>
                                 </div>
                                 <div id="post-content" class="text-float2">                                
-                                    <h3>Museum Tsunami Aceh</h3>
+                                    <h3>{{ $museum->getTranslatedAttribute('name') }}</h3>
                                     <p class="block-with-text">
-                                        Museum Tsunami Aceh dibangun sebagai media untuk mengenang kembali musibah gempa bumi dan tsunami yang terjadi di Aceh pada 26 Desember 2004 yang mengakibatkan kurang lebih 127.720 orang meninggal, 93.285 orang dinyatakan hilang, dan 635.384 orang kehilangan tempat tinggal. Museum ini dibangun di atas lahan seluas ±10.000 m2 yang terletak di Jalan Sultan Iskandar Muda No.3 Blang Padang Banda Aceh - Indonesia 23243, persisnya di bekas kantor Dinas Peternakan Aceh sebelah pemakaman kuburan Belanda (Kerkhoff) dan menghabiskan dana ± 66.445.421.000 dalam proses pembangunannya. Museum ini diinisiasi atas prakarsa Badan Rehabilitasi dan Rekonstruksi (BRR) NAD-Nias sebagai penyandang anggaran bangunan dan Kementerian Energi dan Sumber Daya Mineral (ESDM) sebagai penyandang anggaran perencanaan, studi Isi, penyediaan koleksi museum dan pedoman pengelolaan museum. Sedangkan Posisi Pemerintah Aceh sebagai penyedia lahan dan pengelola museum, Pemerintah Kota Banda Aceh beserta Ikatan Arsitek Indonesia cabang Aceh membantu penyediaan sarana dan prasarana lingkungan museum dan membantu penyelenggaraan sayembara pra rencana pembangunan museum.
-                                        Museum ini diinisiasi atas prakarsa Badan Rehabilitasi dan Rekonstruksi (BRR) NAD-Nias sebagai penyandang anggaran bangunan dan Kementerian Energi dan Sumber Daya Mineral (ESDM) sebagai penyandang anggaran perencanaan, studi Isi, penyediaan koleksi museum dan pedoman pengelolaan museum. Sedangkan Posisi Pemerintah Aceh sebagai penyedia lahan dan pengelola museum, Pemerintah Kota Banda Aceh beserta Ikatan Arsitek Indonesia cabang Aceh membantu penyediaan sarana dan prasarana lingkungan museum dan membantu penyelenggaraan sayembara pra rencana pembangunan museum.
+                                        {{-- {{ str_limit($museum->getTranslatedAttribute('desc'), 50, ) }} --}}
+                                        {{ substr(strip_tags($museum->getTranslatedAttribute('desc')), 0, 200) }}
                                     </p>                                                          
                                    <p><a class="login-social" href="m-tsunami">Selengkapnya ></a></p>
                                     
@@ -442,96 +443,7 @@ A towel, it says, is about the most massively useful thing an interstellar hitch
                     </div>
                    
                 </div>
-                <!-- / tabs_item -->
-                <div class="tabs_item">
-                    <div class="row">
-                        <div class="blog-lst col-md-12 pl0">
-                            <section id="id-100" class="post single">
-                                <div class="post-header single">                              
-                                    <div class="img-float3"> 
-                                        <img src="images/muzee_geo/pltd/1.jpg" alt="">                              
-                                    </div>
-                                </div>
-                                <div id="post-content" class="text-float2">                                
-                                    <h3>Museum PLTD Apung Aceh</h3>
-                                    <p class="block-with-text">
-                                        Kapal Pembangkit Listrik Tenaga Diesel (PLTD) Apung adalah kapal pembangkit listrik tenaga diesel yang dibuat di Batam dan selesai pada tanggal 15 Oktober 1996. Kapal dengan berat kotor 2600 ton ini mampu memasok listrik sebesar 10,5 mW untuk kebutuhan masyarakat Kota Banda Aceh dan sebagian Kabupaten Aceh Besar. Kapal PLTD Apung ini telah berlayar ke berbagai tempat di Indonesia. Dipakai pertama kali di Pontianak tahun 1997, Kapal PLTD Apung meneruskan perjalanannya ke Bali pada tahun 1999, ke Madura pada tahun 2000, kembali lagi ke Pontianak pada tahun 2001. Akhirnya berlabuh di Banda Aceh pada bulan Juli 2003. Keberadaan kapal milik Perusahaan Listrik Negara (PLN) ini di Banda Aceh adalah sebagai antisipasi gangguan listrik akibat seringnya terjadinya kontak senjata antara aparat pemerintah RI dengan Gerakan Aceh Merdeka (GAM) ketika konflik Aceh masih berlangsung. Karena pada saat konflik terjadi, menara-menara PLN banyak dirobohkan oleh pihak yang tidak bertanggung jawab yang mengakibatkan pasokan listrik menjadi terhambat.
-                                    </p>                                                          
-                                    <p><a class="login-social" href="m-pltd-apung">Selengkapnya ></a></p>
-                                </div>
-                            </section>  
-                        </div>                                 
-                    </div>
-                    
-                </div>
-                <!-- / tabs_item -->
-                <div class="tabs_item">
-                    <div class="row">
-                        <div class="blog-lst col-md-12 pl0">
-                            <section id="id-100" class="post single">
-                                <div class="post-header single">                              
-                                    <div class="img-float3"> 
-                                        <img src="images/muzee_geo/kars/1.jpg" alt="">                              
-                                    </div>
-                                </div>
-                                <div id="post-content" class="text-float2">                                
-                                    <h3>Museum Kars Indonesia</h3>
-                                    <p class="block-with-text">
-                                        Kapal Pembangkit Listrik Tenaga Diesel (PLTD) Apung adalah kapal pembangkit listrik tenaga diesel yang dibuat di Batam dan selesai pada tanggal 15 Oktober 1996. Kapal dengan berat kotor 2600 ton ini mampu memasok listrik sebesar 10,5 mW untuk kebutuhan masyarakat Kota Banda Aceh dan sebagian Kabupaten Aceh Besar. Kapal PLTD Apung ini telah berlayar ke berbagai tempat di Indonesia. Dipakai pertama kali di Pontianak tahun 1997, Kapal PLTD Apung meneruskan perjalanannya ke Bali pada tahun 1999, ke Madura pada tahun 2000, kembali lagi ke Pontianak pada tahun 2001. Akhirnya berlabuh di Banda Aceh pada bulan Juli 2003. Keberadaan kapal milik Perusahaan Listrik Negara (PLN) ini di Banda Aceh adalah sebagai antisipasi gangguan listrik akibat seringnya terjadinya kontak senjata antara aparat pemerintah RI dengan Gerakan Aceh Merdeka (GAM) ketika konflik Aceh masih berlangsung. Karena pada saat konflik terjadi, menara-menara PLN banyak dirobohkan oleh pihak yang tidak bertanggung jawab yang mengakibatkan pasokan listrik menjadi terhambat.
-                                    </p>                                                          
-                                    <p><a class="login-social" href="m-kars-indonesia">Selengkapnya ></a></p>
-                                </div>
-                            </section>  
-                        </div>                                 
-                    </div>
-                    
-                </div>
-                <!-- / tabs_item -->
-                <div class="tabs_item">
-                    <div class="row">
-                        <div class="blog-lst col-md-12 pl0">
-                            <section id="id-100" class="post single">
-                                <div class="post-header single">                              
-                                    <div class="img-float3"> 
-                                        <img src="images/muzee_geo/batur/1.jpg" alt="">                              
-                                    </div>
-                                </div>
-                                <div id="post-content" class="text-float2">                                
-                                    <h3>Museum Geopark Batur</h3>
-                                    <p class="block-with-text">
-                                        Museum Geopark Batur yang terletak di Penelokan, Kecamatan Kintamani, Kabupaten Bali merupakan pengembangan dari Museum Gunung api Batur. Pembangunan Museum Gunung api Batur terutama dilatarbelakangi oleh banyaknya gunung api di Indonesia sebagai negara yang di jalur cincin api (ring of fire) dunia, dengan tujuan menyampaikan informasi gunung api Indonesia, baik ditinjau dari aspek bahaya maupun manfaatnya, kepada masyarakat.
-                                    </p>
-                                    <p><a class="login-social" href="m-geopark-batur">Selengkapnya ></a></p>                                                          
-                                    
-                                </div>
-                            </section>  
-                        </div>                                 
-                    </div>
-                    
-                </div>
-                <!-- / tabs_item -->
-                <div class="tabs_item">
-                    <div class="row">
-                        <div class="blog-lst col-md-12 pl0">
-                            <section id="id-100" class="post single">
-                                <div class="post-header single">                              
-                                    <div class="img-float3"> 
-                                        <img src="images/muzee_geo/merapi/1.jpg" alt="">                              
-                                    </div>
-                                </div>
-                                <div id="post-content" class="text-float2">                                
-                                    <h3>Museum Gunungapi Merapi</h3>
-                                    <p class="block-with-text">
-                                        Museum Gunungapi Merapi mulai dibangun pada tahun 2005 atas kerjasama antara Kementerian Energi Sumber Daya Mineral, Pemerintah Propinsi Daerah Istimewa Yogyakarta dan Pemerintah Kabupaten Sleman. Museum ini diresmikan pada tanggal 1 Oktober 2009 dan dibuka untuk umum pada tanggal 1 Januari 2010. Museum dengan luas bangunan sebesar 4.700 m2 ini, berdiri di atas area lahan seluas 3,5 Ha.
-                                    </p>
-                                    <p><a class="login-social" href="m-gunungapi-merapi">Selengkapnya ></a></p>                                                          
-                                    
-                                </div>
-                            </section>  
-                        </div>                                 
-                    </div>
-                    
-                </div>
+                @endforeach
                 
                 
 
