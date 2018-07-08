@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use App\Content;
-use App\Data_type;
+use App\Museum;
+// use App\Data_type;
 
 class FrontController extends Controller
 {
@@ -13,8 +14,9 @@ class FrontController extends Controller
     {
       $events = Content::where('category_id', 2)->orderBy('created_at', 'desc')->take(2)->get();
       $news = Content::where('category_id', 1)->orderBy('created_at', 'desc')->get();
+      $museums = Museum::orderBy('id', 'asc')->get();
 
     //   return dd($Events);
-      return view('front', compact('events','news'));
+      return view('front', compact('events','news','museums'));
    }
 }
